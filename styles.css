@@ -1,17 +1,16 @@
-:root {
-    --primary-color: steelblue;
-    --secondary-color: lightsteelblue;
-    --accent-color: #ff7f50;
-    --text-color: #333;
-    --light-background: #f4f4f4;
-    --dark-background: #2c3e50;
-    --grid-item-bg-1: lightsalmon;
-    --grid-item-bg-2: lightseagreen;
+/* styles.css */
 
-    --font-size-large: 2.5em;
-    --font-size-medium: 1.5em;
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #f0f0f0;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #fff;
+    --header-bg-color: darkblue;
+    --font-size-large: 1.8em;
+    --font-size-medium: 1.2em;
     --font-size-normal: 1em;
-    --font-size-small: 0.85em;
+    --font-size-small: 0.8em;
 }
 
 body {
@@ -20,159 +19,130 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: var(--text-color);
-    background-color: var(--light-background);
+    background-color: var(--background-color);
+    line-height: 1.6;
 }
 
 .header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    position: fixed; 
-    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    z-index: 100;
 }
 
 .header h1 {
-    margin: 0;
     font-size: var(--font-size-large);
+    margin: 0;
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 section {
     padding: 2em;
-    margin-bottom: 1em;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
+    margin-bottom: 2em;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
 }
 
 section h2 {
     font-size: var(--font-size-medium);
     color: var(--primary-color);
     margin-bottom: 1em;
+    text-align: center;
 }
 
 section p {
     font-size: var(--font-size-normal);
-    line-height: 1.6;
 }
 
 .flexbox-section {
-    background-color: var(--light-background);
+    background-color: #f9f9f9;
 }
 
 .flex-container {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 1em;
     padding: 1em;
+    gap: 1em;
 }
 
 .flex-item {
-    background-color: var(--secondary-color);
+    flex: 1;
+    background-color: #e0f7fa;
     padding: 1.5em;
-    border-radius: 8px;
-    flex: 1; 
-    min-width: 280px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
     text-align: center;
-    color: white;
+    min-width: 250px;
 }
 
 .flex-item h3 {
     font-size: var(--font-size-medium);
-    margin-top: 0;
     color: var(--accent-color);
-}
-
-.flex-item p {
-    font-size: var(--font-size-normal);
+    margin-bottom: 0.5em;
 }
 
 .grid-section {
-    background-color: var(--light-background);
+    background-color: #f0f4c3;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 20px;
+    grid-gap: 1em;
     padding: 1em;
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .grid-item {
-    background-color: var(--grid-item-bg-1);
-    padding: 2em;
-    border-radius: 8px;
+    background-color: #c8e6c9;
+    padding: 1.5em;
+    border-radius: 5px;
     text-align: center;
-    color: white;
-    font-weight: bold;
     font-size: var(--font-size-normal);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.grid-item:nth-child(even) {
-    background-color: var(--grid-item-bg-2);
 }
 
 .positioning-section {
-    position: relative; 
+    position: relative;
     min-height: 200px;
+    background-color: #bbdefb;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
 }
 
 .relative-container {
-    position: relative;
-    width: 80%; 
-    min-height: 150px;
-    background-color: var(--secondary-color);
+    width: 70%;
+    max-width: 600px;
     padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    background-color: #fff;
+    border-radius: 8px;
     text-align: center;
+    position: relative;
 }
 
 .absolute-box {
-    position: absolute; 
+    position: absolute;
     top: 10px;
     left: 10px;
     background-color: var(--accent-color);
     color: white;
     padding: 1em;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     font-size: var(--font-size-small);
 }
 
 .footer {
-    background-color: var(--dark-background);
+    background-color: var(--header-bg-color);
     color: white;
     text-align: center;
-    padding: 1.5em 0;
-    position: relative; 
+    padding: 1em 0;
     margin-top: 2em;
-    bottom: 0;
-    width: 100%;
-    font-size: var(--font-size-small);
 }
