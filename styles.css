@@ -135,6 +135,7 @@ section p {
     position: absolute;
     top: 10px;
     left: 10px;
+    text-align: center;
     background-color: var(--accent-color);
     color: white;
     padding: 1em;
