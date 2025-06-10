@@ -1,3 +1,6 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+} 
 :root {
     --primary-color: #3498db;
     --secondary-color: #f0f0f0;
@@ -19,6 +22,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .header {
@@ -121,8 +125,9 @@ section p {
 .relative-container {
     width: 70%;
     max-width: 600px;
-    padding-top: 90px;
-    padding-left: 60px;
+    min-width: 280px;
+    padding-top: 80px;
+    padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 2em;
     background-color: #fff;
@@ -139,9 +144,13 @@ section p {
     text-align: center;
     background-color: var(--accent-color);
     color: white;
-    padding: 1em;
+    padding: 0.8em 1em;
     border-radius: 5px;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: var(--font-size-small);
+    max-width: calc(100% - 20px);
 }
 
 .footer {
